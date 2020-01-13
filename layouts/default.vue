@@ -44,14 +44,11 @@
         hide-details
       />
     </v-app-bar>
-    <v-content>
-      <v-container fill-height>
-        <nuxt />
-      </v-container>
+    <v-content mx-4 mb-4>
+      <nuxt />
     </v-content>
     <v-footer
       :fixed="fixed"
-      app
     >
       <span>&copy; 2020</span>
     </v-footer>

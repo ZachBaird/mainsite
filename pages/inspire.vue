@@ -1,16 +1,18 @@
 <template>
-  <v-layout align-center>
-    <v-flex class="text-center">
-      <blockquote class="blockquote font-weight-medium">
-        &#8220;{{ chosenQuote.quote }}&#8221;
-        <footer>
-          <small>
-            <em>&mdash;{{ chosenQuote.from }}</em>
-          </small>
-        </footer>
-      </blockquote>
-    </v-flex>
-  </v-layout>
+  <v-container fill-height>
+    <v-layout align-center>
+      <v-flex class="text-center">
+        <blockquote class="blockquote font-weight-medium">
+          &#8220;{{ chosenQuote.quote }}&#8221;
+          <footer>
+            <small>
+              <em>&mdash;{{ chosenQuote.from }}</em>
+            </small>
+          </footer>
+        </blockquote>
+      </v-flex>
+    </v-layout>
+  </v-container>
 </template>
 
 <script>
