@@ -1,7 +1,7 @@
 <template>
   <v-layout align-center>
     <v-flex class="text-center">
-      <blockquote class="blockquote">
+      <blockquote class="blockquote font-weight-medium">
         &#8220;{{ chosenQuote.quote }}&#8221;
         <footer>
           <small>

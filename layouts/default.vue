@@ -73,6 +73,11 @@ export default {
           to: '/'
         },
         {
+          icon: 'mdi-ballot',
+          title: 'Projects',
+          to: '/projects'
+        },
+        {
           icon: 'mdi-lightbulb',
           title: 'Inspire',
           to: '/inspire'
