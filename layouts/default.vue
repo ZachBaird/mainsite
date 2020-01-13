@@ -1,5 +1,5 @@
 <template>
-  <v-app dadrk>
+  <v-app>
     <v-navigation-drawer
       v-model="drawer"
       :clipped="clipped"
@@ -15,7 +15,9 @@
           exact
         >
           <v-list-item-action>
-            <v-icon>{{ item.icon }}</v-icon>
+            <v-icon class="primary--text">
+              {{ item.icon }}
+            </v-icon>
           </v-list-item-action>
           <v-list-item-content>
             <v-list-item-title v-text="item.title" />
@@ -28,21 +30,22 @@
       fixed
       app
     >
-      <v-app-bar-nav-icon @click.stop="drawer = !drawer" />
+      <v-app-bar-nav-icon
+        @click.stop="drawer = !drawer"
+      />
       <v-toolbar-title v-text="title" />
       <v-spacer />
       <v-switch
-        label="Theme"
         v-model="$vuetify.theme.dark"
-        :color="$vuetify.theme.themes.dark.info"
-        class="switch-center ma-0"
+        label="Theme"
+        class="primary--text switch-center ma-0"
+        color="primary"
         inset
         hide-details
-      >
-      </v-switch>
+      />
     </v-app-bar>
     <v-content>
-      <v-container>
+      <v-container fill-height>
         <nuxt />
       </v-container>
     </v-content>
@@ -50,7 +53,7 @@
       :fixed="fixed"
       app
     >
-      <span>&copy; 2019</span>
+      <span>&copy; 2020</span>
     </v-footer>
   </v-app>
 </template>
@@ -66,11 +69,11 @@ export default {
       items: [
         {
           icon: 'mdi-apps',
-          title: 'Main',
+          title: 'Home',
           to: '/'
         },
         {
-          icon: 'mdi-chart-bubble',
+          icon: 'mdi-lightbulb',
           title: 'Inspire',
           to: '/inspire'
         }
@@ -80,18 +83,3 @@ export default {
   }
 }
 </script>
-
-<style scoped>
-.switch-center {
-  display: flex;
-  justify-content: center;
-}
-
-.switch-center .v-input__slot {
-  margin-bottom: 0 !important;
-}
-
-.switch-center .v-messages {
-  min-height: 0 !important;
-}
-</style>

@@ -1,19 +1,50 @@
 <template>
-  <v-layout>
+  <v-layout align-center>
     <v-flex class="text-center">
-      <img
-        src="/v.png"
-        alt="Vuetify.js"
-        class="mb-5"
-      >
       <blockquote class="blockquote">
-        &#8220;First, solve the problem. Then, write the code.&#8221;
+        &#8220;{{ chosenQuote.quote }}&#8221;
         <footer>
           <small>
-            <em>&mdash;John Johnson</em>
+            <em>&mdash;{{ chosenQuote.from }}</em>
           </small>
         </footer>
       </blockquote>
     </v-flex>
   </v-layout>
 </template>
+
+<script>
+export default {
+  data () {
+    return {
+      quotes: [
+        {
+          from: 'John Johnson',
+          quote: 'First, solve the problem. Then, write the code.'
+        },
+        {
+          from: 'Lucius Seneca',
+          quote: 'Luck is what happens when preparatation meets opportunity'
+        },
+        {
+          from: 'Lucius Seneca',
+          quote: 'Difficulties strenghten the mind, as labor does the body.'
+        },
+        {
+          from: 'Harold Abelson',
+          quote: 'Programs must be written for people to read, and only incidentally for machines to execute.'
+        },
+        {
+          from: 'Uncle Bob',
+          quote: 'Truth can only be found in one place: the code.'
+        }
+      ]
+    }
+  },
+  computed: {
+    chosenQuote () {
+      return this.quotes[Math.floor(Math.random() * this.quotes.length)]
+    }
+  }
+}
+</script>

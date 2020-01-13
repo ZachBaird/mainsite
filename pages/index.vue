@@ -1,40 +1,22 @@
 <template>
-  <v-layout
-    column
-    justify-center
-    align-center
-  >
-    <v-flex
-      xs12
-      sm10
-      md8
-    >
-      <div class="text-center">
-        <v-card>
-          <v-card-title class="headline">
-           A developer who cares
-          </v-card-title>
-          <v-card-text>
-            <p>text content</p>
-          </v-card-text>
-          <v-card-actions>
-            <v-spacer />
-            <v-btn
-              color="primary"
-              nuxt
-              to="/inspire"
-            >
-              See today's inspiration
-            </v-btn>
-          </v-card-actions>
-        </v-card>
+  <v-layout align-center>
+    <v-flex>
+      <div class="text-right" style="max-width: 950px">
+        <h2 class="display-3 font-weight-medium">
+          Zach Baird
+        </h2>
+        <p class="text--secondary display-1 font-weight-regular mb-0">
+          Fullstack Web Developer
+        </p>
+        <v-btn text small color="primary" to="/inspire" class="my-0">
+          Click here for inspiration
+        </v-btn>
       </div>
     </v-flex>
   </v-layout>
 </template>
 
 <script>
-
 export default {
   components: {}
 }
