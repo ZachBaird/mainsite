@@ -2,11 +2,11 @@
   <v-container fill-height>
     <v-layout align-center>
       <v-flex class="text-center">
-        <blockquote class="blockquote font-weight-medium">
+        <blockquote class="font-weight-medium">
           &#8220;{{ chosenQuote.quote }}&#8221;
           <footer>
             <small>
-              <em>&mdash;{{ chosenQuote.from }}</em>
+              <em>&mdash; {{ chosenQuote.from }}</em>
             </small>
           </footer>
         </blockquote>

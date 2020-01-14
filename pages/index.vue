@@ -3,9 +3,9 @@
     <v-layout align-center justify-center>
       <v-flex xs12 sm12 md6>
         <div class="text-right mx-auto br-1">
-          <h2 class="display-3 font-weight-medium">
+          <p class="display-3 font-weight-medium">
             Zach Baird
-          </h2>
+          </p>
           <p class="text--secondary display-1 font-weight-regular mb-0">
             Fullstack Web Developer
           </p>
