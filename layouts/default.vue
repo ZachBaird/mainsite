@@ -51,6 +51,17 @@
       :fixed="fixed"
     >
       <span>&copy; 2020</span>
+      <v-spacer />
+      <a href="https://github.com/ZachBaird" target="_blank" class="mr-1">
+        <v-icon color="purple">
+          mdi-github-circle
+        </v-icon>
+      </a>
+      <a href="https://google.com" target="_blank">
+        <v-icon color="blue">
+          mdi-linkedin
+        </v-icon>
+      </a>
     </v-footer>
   </v-app>
 </template>
@@ -70,6 +81,11 @@ export default {
           to: '/'
         },
         {
+          icon: 'mdi-human-greeting',
+          title: 'About',
+          to: '/about'
+        },
+        {
           icon: 'mdi-ballot',
           title: 'Projects',
           to: '/projects'
@@ -78,6 +94,11 @@ export default {
           icon: 'mdi-lightbulb',
           title: 'Inspire',
           to: '/inspire'
+        },
+        {
+          icon: 'mdi-contact-mail-outline',
+          title: 'Resume',
+          to: '/ZachBairdResume.pdf'
         }
       ],
       title: 'Zach Baird'
@@ -85,3 +106,9 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+footer a {
+  text-decoration: none;
+}
+</style>

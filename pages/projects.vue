@@ -1,17 +1,28 @@
 <template>
   <div class="projects">
-    <v-container class="my-5 project">
-      <h1 class="subheading grey--text">
+    <v-container class="project">
+      <h1 class="subheading grey--text mb-1">
         Projects
       </h1>
       <v-img
         :src="projects[page-1].image"
+        :lazy-src="projects[page-1].image"
         width="600px"
         height="175px"
         alt="Project Screenshot"
         class="mx-auto"
-        contain="true"
-      />
+        contain
+      >
+        <template v-slot:placeholder>
+          <v-row
+            class="fill-height ma-0"
+            align="center"
+            justify="center"
+          >
+            <v-progress-circular indeterminate color="accent" />
+          </v-row>
+        </template>
+      </v-img>
       <h2 class="title-section font-weight-regular text-center my-3">
         {{ projects[page-1].title }} | Status: {{ projects[page-1].status }}
       </h2>
@@ -27,9 +38,14 @@
             style="display: inline;"
           >
             &nbsp;
-            <v-icon :color="stack.color">
-              {{ stack.img }}
-            </v-icon>
+            <v-tooltip color="accent" top>
+              <template v-slot:activator="{ on }">
+                <v-icon :color="stack.color" v-on="on">
+                  {{ stack.img }}
+                </v-icon>
+              </template>
+              <span>{{ stack.snackbar }}</span>
+            </v-tooltip>
           </div>
         </div>
         <br>
@@ -48,6 +64,7 @@
       v-model="page"
       color="primary"
       :length="5"
+      class="mt-auto"
     />
   </div>
 </template>
@@ -56,6 +73,7 @@
 export default {
   data () {
     return {
+      snackbarTimeout: 3000,
       page: 1,
       projects: [
         {
@@ -113,7 +131,7 @@ export default {
         {
           image: '',
           title: 'Python Automation',
-          status: 'On hold',
+          status: 'Backlog',
 
           description: 'A series of Python scripts that automate file manipulation, web scraping, and GUI tasks.',
           url: 'https://github.com/ZachBaird/Python_Automation',
@@ -128,7 +146,7 @@ export default {
         {
           image: 'djangorealestate.jpg',
           title: 'Realestate app',
-          status: 'On hold',
+          status: 'Bugfix',
 
           description: 'A real estate application built with the Django framework.',
           url: 'https://github.com/ZachBaird/Real-Estate-App',
@@ -153,11 +171,9 @@ export default {
 
 <style>
 .projects {
-  margin: 10px 15px 0 15px;
-}
-
-.project {
-  height: 475px;
+  display: flex;
+  flex-direction: column;
+  height: 95%;
 }
 
 .title-section {
@@ -171,5 +187,9 @@ export default {
   max-width: 600px;
   width: 70%;
   margin: auto;
+}
+
+i {
+  cursor: pointer;
 }
 </style>
