@@ -5,7 +5,7 @@
       width="150px"
       height="150px"
       contain
-      class="mx-auto"
+      class="mx-auto img-circle"
       alt="My wife and I"
     />
     <br>
@@ -46,7 +46,7 @@
         height="150px"
         width="150px"
         contain
-        class="mx-auto"
+        class="mx-auto img-circle"
         alt="Kona"
       />
       <br>
@@ -55,7 +55,7 @@
         height="150px"
         width="150px"
         contain
-        class="mx-auto"
+        class="mx-auto img-circle"
         alt="Chai"
       />
     </div>
@@ -75,5 +75,9 @@ export default {
     max-width: 650px;
     width: 70%;
     margin: auto;
+}
+
+.img-circle {
+    border-radius: 50%;
 }
 </style>

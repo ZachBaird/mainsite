@@ -10,7 +10,7 @@
         width="600px"
         height="175px"
         alt="Project Screenshot"
-        class="mx-auto"
+        class="mx-auto medium-screen-dimensions"
         contain
       >
         <template v-slot:placeholder>
@@ -191,5 +191,12 @@ export default {
 
 i {
   cursor: pointer;
+}
+
+@media(min-width: 750px) {
+  .medium-screen-dimensions {
+    width: 80% !important;
+    height: auto !important;
+  }
 }
 </style>
