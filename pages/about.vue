@@ -110,6 +110,10 @@ export default {
     margin: auto;
 }
 
+.introduction p {
+    line-height: 1.4;
+}
+
 .puppy-pictures {
     display: flex;
 }
