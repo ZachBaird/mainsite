@@ -75,7 +75,7 @@ typings/
 .serverless
 
 # For Nuxt generate
-dist
+dist/
 
 # IDE / Editor
 .idea
