@@ -192,11 +192,4 @@ export default {
 i {
   cursor: pointer;
 }
-
-@media(min-width: 750px) {
-  .medium-screen-dimensions {
-    width: 80% !important;
-    height: auto !important;
-  }
-}
 </style>

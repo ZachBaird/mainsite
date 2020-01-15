@@ -2,12 +2,23 @@
   <v-container>
     <v-img
       src="main-image.jpg"
+      lazy-src="main-image.jpg"
       width="150px"
       height="150px"
       contain
       class="mx-auto img-circle"
       alt="My wife and I"
-    />
+    >
+      <template v-slot:placeholder>
+        <v-row
+          class="fill-height ma-0"
+          align="center"
+          justify="center"
+        >
+          <v-progress-circular indeterminate color="accent" />
+        </v-row>
+      </template>
+    </v-img>
     <br>
     <div class="introduction">
       <p>
@@ -28,7 +39,6 @@
         If you want to see some personal projects,
         <v-btn
           href="/projects"
-          target="_blank"
           color="primary"
           small
           text
@@ -44,20 +54,42 @@
       <div class="puppy-pictures">
         <v-img
           src="Kona.jpg"
+          lazy-src="Kona.jpg"
           height="150px"
           width="150px"
           contain
           class="mx-auto img-circle"
           alt="Kona"
-        />
+        >
+          <template v-slot:placeholder>
+            <v-row
+              class="fill-height ma-0"
+              align="center"
+              justify="center"
+            >
+              <v-progress-circular indeterminate color="accent" />
+            </v-row>
+          </template>
+        </v-img>
         <v-img
           src="Chai.jpg"
+          lazy-src="Chai.jpg"
           height="150px"
           width="150px"
           contain
           class="mx-auto img-circle"
           alt="Chai"
-        />
+        >
+          <template v-slot:placeholder>
+            <v-row
+              class="fill-height ma-0"
+              align="center"
+              justify="center"
+            >
+              <v-progress-circular indeterminate color="accent" />
+            </v-row>
+          </template>
+        </v-img>
       </div>
     </div>
   </v-container>
@@ -89,6 +121,16 @@ export default {
 @media (min-width: 800px) {
     .img-circle {
         width: 200px !important;
+    }
+}
+
+@media (max-width: 550px) {
+    .puppy-pictures {
+        display: block;
+    }
+    .img-circle {
+        display: block;
+        margin-bottom: 15px;
     }
 }
 </style>

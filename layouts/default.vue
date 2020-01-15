@@ -94,11 +94,6 @@ export default {
           icon: 'mdi-lightbulb',
           title: 'Inspire',
           to: '/inspire'
-        },
-        {
-          icon: 'mdi-contact-mail-outline',
-          title: 'Resume',
-          to: '/ZacharyBairdResume.pdf'
         }
       ],
       title: 'Zach Baird'
