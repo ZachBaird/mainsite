@@ -64,7 +64,7 @@
       v-model="page"
       color="primary"
       :length="5"
-      class="mt-auto"
+      class="mt-auto project-pagination"
     />
   </div>
 </template>
@@ -191,5 +191,11 @@ export default {
 
 i {
   cursor: pointer;
+}
+
+@media(max-height: 650px) {
+  .project-pagination {
+    margin-top: 10px !important;
+  }
 }
 </style>

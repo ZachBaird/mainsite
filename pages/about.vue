@@ -38,7 +38,7 @@
         <br>
         If you want to see some personal projects,
         <v-btn
-          href="/projects"
+          to="/projects"
           color="primary"
           small
           text
