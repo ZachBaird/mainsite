@@ -1,36 +1,49 @@
 <template>
   <div class="projects">
-    <h1 class="subheading grey--text">
-      Projects
-    </h1>
     <v-container class="my-5 project">
+      <h1 class="subheading grey--text">
+        Projects
+      </h1>
       <v-img
         :src="projects[page-1].image"
-        width="100px"
+        width="600px"
+        height="175px"
         alt="Project Screenshot"
         class="mx-auto"
+        contain="true"
       />
-      <h2 class="font-weight-regular text-center my-1">
+      <h2 class="title-section font-weight-regular text-center my-3">
         {{ projects[page-1].title }} | Status: {{ projects[page-1].status }}
       </h2>
-      <p class="mt-3">
-        {{ projects[page-1].description }}
-      </p>
-      <div style="display: inline;">
-        Stack:
-        <div
-          v-for="stack in projects[page-1].tech"
-          :key="stack.snackbar"
-          style="display: inline;"
-        >
-          &nbsp;
-          <v-icon color="primary">
-            {{ stack.img }}
-          </v-icon>
+      <div class="description-section">
+        <p class="mt-3">
+          {{ projects[page-1].description }}
+        </p>
+        <div style="display: inline;">
+          Stack:
+          <div
+            v-for="stack in projects[page-1].tech"
+            :key="stack.snackbar"
+            style="display: inline;"
+          >
+            &nbsp;
+            <v-icon :color="stack.color">
+              {{ stack.img }}
+            </v-icon>
+          </div>
         </div>
+        <br>
+        <v-btn
+          :href="projects[page-1].url"
+          target="_blank"
+          outlined
+          color="primary"
+          class="mt-2"
+        >
+          See code
+        </v-btn>
       </div>
     </v-container>
-    <v-spacer />
     <v-pagination
       v-model="page"
       color="primary"
@@ -46,85 +59,89 @@ export default {
       page: 1,
       projects: [
         {
-          image: 'v.png',
+          image: 'mainsite.jpg',
           title: 'Main Site',
           status: 'Active',
           description: 'A main site built with Nuxt.js and statically generated.',
-          url: 'https://google.com',
+          url: 'https://github.com/ZachBaird/MainSiteRefresh',
           tech: [
             {
               snackbar: 'Nuxt.js',
-              img: 'mdi-nuxt'
+              img: 'mdi-nuxt',
+              color: 'teal'
             },
             {
               snackbar: 'Vuetify.js',
-              img: 'mdi-vuetify'
+              img: 'mdi-vuetify',
+              color: 'blue'
             }
           ]
         },
         {
-          image: 'v.png',
+          image: 'caesarcipher.jpg',
           title: 'CaesarCipher',
           status: 'Finished',
           description: 'A Ruby script that runs a CaesarCipher on a string of text.',
-          url: 'https://google.com',
+          url: 'https://github.com/ZachBaird/CaesarCipher',
           tech: [
             {
               snackbar: 'Ruby',
-              img: 'mdi-ruby'
+              img: 'mdi-ruby',
+              color: 'red'
             }
           ]
         },
         {
-          image: 'v.png',
+          image: 'oreoweather.jpg',
           title: 'OreoWeather',
           status: 'On hold',
-          description: 'A .Net Core weather application for my grandfather. Consumes the Dark Sky API and allows him to avoid the slow & cluttered, existing weather sites.',
-          url: 'https://google.com',
+          description: 'A .Net Core weather application for my grandfather.',
+          url: 'https://github.com/ZachBaird/OreoWeather',
           tech: [
             {
               snackbar: 'C# .Net Core',
-              img: 'mdi-dot-net'
+              img: 'mdi-dot-net',
+              color: 'purple'
             },
             {
               snackbar: 'Bootstrap',
-              img: 'mdi-bootstrap'
+              img: 'mdi-bootstrap',
+              color: 'purple'
             }
           ]
         },
         {
-          image: 'v.png',
+          image: '',
           title: 'Python Automation',
           status: 'On hold',
 
           description: 'A series of Python scripts that automate file manipulation, web scraping, and GUI tasks.',
-          url: 'https://google.com',
+          url: 'https://github.com/ZachBaird/Python_Automation',
           tech: [
             {
               snackbar: 'Python',
-              img: 'mdi-language-python-text'
+              img: 'mdi-language-python-text',
+              color: 'green'
             }
           ]
         },
         {
-          image: 'v.png',
+          image: 'djangorealestate.jpg',
           title: 'Realestate app',
           status: 'On hold',
 
           description: 'A real estate application built with the Django framework.',
-          url: 'https://google.com',
+          url: 'https://github.com/ZachBaird/Real-Estate-App',
           tech: [
             {
-              snackbar: 'Django',
-              img: 'mdi-django'
-            },
-            {
               snackbar: 'Python',
-              img: 'mdi-language-python-text'
+              img: 'mdi-language-python-text',
+              color: 'green'
             },
             {
               snackbar: 'Bootstrap',
-              img: 'mdi-bootstrap'
+              img: 'mdi-bootstrap',
+              color: 'purple'
             }
           ]
         }
@@ -139,7 +156,20 @@ export default {
   margin: 10px 15px 0 15px;
 }
 
-.projects .project {
-  height: 70%;
+.project {
+  height: 475px;
+}
+
+.title-section {
+  max-width: 600px;
+  width: 70%;
+  margin: auto;
+  border-bottom: 1px solid #ccc;
+}
+
+.description-section {
+  max-width: 600px;
+  width: 70%;
+  margin: auto;
 }
 </style>
