@@ -1,7 +1,7 @@
 <template>
   <v-container>
     <v-img
-      src="v.png"
+      src="main-image.jpg"
       width="150px"
       height="150px"
       contain
@@ -13,7 +13,7 @@
       <p>
         Welcome!<br><br>My name is Zach. I am a software engineer currently developing for Leidos in Harrisburg, PA. With almost 3 years of experience, I have primarily worked with software from the healthcare and military sectors.<br>If you're interested in my work experience,
         <v-btn
-          href="../ZachBairdResume.pdf"
+          href="../ZacharyBairdResume.pdf"
           target="_blank"
           color="primary"
           small
@@ -41,23 +41,24 @@
       <h2 class="font-weight-regular text-center mb-2">
         Kona & Chai
       </h2>
-      <v-img
-        src="v.png"
-        height="150px"
-        width="150px"
-        contain
-        class="mx-auto img-circle"
-        alt="Kona"
-      />
-      <br>
-      <v-img
-        src="v.png"
-        height="150px"
-        width="150px"
-        contain
-        class="mx-auto img-circle"
-        alt="Chai"
-      />
+      <div class="puppy-pictures">
+        <v-img
+          src="Kona.jpg"
+          height="150px"
+          width="150px"
+          contain
+          class="mx-auto img-circle"
+          alt="Kona"
+        />
+        <v-img
+          src="Chai.jpg"
+          height="150px"
+          width="150px"
+          contain
+          class="mx-auto img-circle"
+          alt="Chai"
+        />
+      </div>
     </div>
   </v-container>
 </template>
@@ -77,7 +78,17 @@ export default {
     margin: auto;
 }
 
+.puppy-pictures {
+    display: flex;
+}
+
 .img-circle {
     border-radius: 50%;
+}
+
+@media (min-width: 800px) {
+    .img-circle {
+        width: 200px !important;
+    }
 }
 </style>

@@ -57,7 +57,7 @@
           mdi-github-circle
         </v-icon>
       </a>
-      <a href="https://google.com" target="_blank">
+      <a href="https://www.linkedin.com/in/zachary-baird-b7a9a9138?trk=people-guest_profile-result-card_result-card_full-click" target="_blank">
         <v-icon color="blue">
           mdi-linkedin
         </v-icon>
@@ -98,7 +98,7 @@ export default {
         {
           icon: 'mdi-contact-mail-outline',
           title: 'Resume',
-          to: '/ZachBairdResume.pdf'
+          to: '/ZacharyBairdResume.pdf'
         }
       ],
       title: 'Zach Baird'
