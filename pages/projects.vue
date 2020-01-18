@@ -1,9 +1,6 @@
 <template>
   <div class="projects">
     <v-container class="project">
-      <h1 class="subheading grey--text mb-1">
-        Projects
-      </h1>
       <v-img
         v-show="projects[page-1].image"
         :src="projects[page-1].image"
@@ -203,6 +200,9 @@ i {
 }
 
 @media(max-width: 650px) {
+  .description-section p {
+    margin-bottom: 0 !important;
+  }
   .project-tech {
     display: flex;
     align-items: center;
