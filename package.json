@@ -1,7 +1,7 @@
 {
-  "name": "nuxtintro",
+  "name": "mainsite",
   "version": "1.0.0",
-  "description": "First Nuxtjs app",
+  "description": "Open-source, husband, developer.",
   "author": "Zach Baird",
   "private": true,
   "scripts": {
