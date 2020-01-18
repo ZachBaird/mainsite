@@ -78,7 +78,7 @@ export default {
         {
           image: 'mainsite.jpg',
           title: 'Main Site',
-          status: 'Active',
+          status: 'Finished',
           description: 'A main site built with Nuxt.js and statically generated.',
           url: 'https://github.com/ZachBaird/MainSiteRefresh',
           tech: [
