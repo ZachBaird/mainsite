@@ -52,7 +52,7 @@
             target="_blank"
             outlined
             color="primary"
-            class="mt-2"
+            class="mt-xs-0 mt-md-2"
           >
             See code
           </v-btn>
@@ -206,6 +206,7 @@ i {
   .project-tech {
     display: flex;
     align-items: center;
+    margin-top: 5px;
   }
 
   .project-tech a {
