@@ -53,7 +53,7 @@
       </h2>
       <div class="puppy-pictures">
         <v-img
-          src="Kona.jpg"
+          src="kona.jpg"
           lazy-src="Kona.jpg"
           height="150px"
           width="150px"

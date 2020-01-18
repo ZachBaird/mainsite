@@ -26,7 +26,7 @@ export default {
         },
         {
           from: 'Lucius Seneca',
-          quote: 'Luck is what happens when preparatation meets opportunity'
+          quote: 'Luck is what happens when preparatation meets opportunity.'
         },
         {
           from: 'Lucius Seneca',
@@ -39,6 +39,10 @@ export default {
         {
           from: 'Uncle Bob',
           quote: 'Truth can only be found in one place: the code.'
+        },
+        {
+          from: 'John Steinbeck',
+          quote: 'What good is the warmth of summer, without the cold of winter to give it sweetness.'
         }
       ]
     }

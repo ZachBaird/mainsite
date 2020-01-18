@@ -5,6 +5,7 @@
         Projects
       </h1>
       <v-img
+        v-show="projects[page-1].image"
         :src="projects[page-1].image"
         :lazy-src="projects[page-1].image"
         width="600px"
@@ -30,34 +31,35 @@
         <p class="mt-3">
           {{ projects[page-1].description }}
         </p>
-        <div style="display: inline;">
-          Stack:
-          <div
-            v-for="stack in projects[page-1].tech"
-            :key="stack.snackbar"
-            style="display: inline;"
-          >
-            &nbsp;
-            <v-tooltip color="accent" top>
-              <template v-slot:activator="{ on }">
-                <v-icon :color="stack.color" v-on="on">
-                  {{ stack.img }}
-                </v-icon>
-              </template>
-              <span>{{ stack.snackbar }}</span>
-            </v-tooltip>
+        <div class="project-tech">
+          <div style="display: inline;">
+            Stack:
+            <div
+              v-for="stack in projects[page-1].tech"
+              :key="stack.snackbar"
+              style="display: inline; text-align: center;"
+            >
+              <v-tooltip color="accent" top>
+                <template v-slot:activator="{ on }">
+                  <v-icon :color="stack.color" v-on="on">
+                    {{ stack.img }}
+                  </v-icon>
+                </template>
+                <span>{{ stack.snackbar }}</span>
+              </v-tooltip>
+            </div>
           </div>
+          <br>
+          <v-btn
+            :href="projects[page-1].url"
+            target="_blank"
+            outlined
+            color="primary"
+            class="mt-2"
+          >
+            See code
+          </v-btn>
         </div>
-        <br>
-        <v-btn
-          :href="projects[page-1].url"
-          target="_blank"
-          outlined
-          color="primary"
-          class="mt-2"
-        >
-          See code
-        </v-btn>
       </div>
     </v-container>
     <v-pagination
@@ -133,7 +135,7 @@ export default {
           title: 'Python Automation',
           status: 'Backlog',
 
-          description: 'A series of Python scripts that automate file manipulation, web scraping, and GUI tasks.',
+          description: 'Python scripts for automation.',
           url: 'https://github.com/ZachBaird/Python_Automation',
           tech: [
             {
@@ -193,9 +195,23 @@ i {
   cursor: pointer;
 }
 
-@media(max-height: 650px) {
-  .project-pagination {
-    margin-top: 10px !important;
+@media(min-width: 750px) {
+  .medium-screen-dimensions {
+    width: 80% !important;
+    height: auto !important;
+  }
+}
+
+@media(max-width: 650px) {
+  .project-tech {
+    display: flex;
+    align-items: center;
+  }
+
+  .project-tech a {
+    margin-top: 0 !important;
+    margin-left: 10px !important;
+    justify-self: center;
   }
 }
 </style>
