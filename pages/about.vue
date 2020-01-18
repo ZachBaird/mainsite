@@ -3,10 +3,7 @@
     <v-img
       src="main-image.jpg"
       lazy-src="main-image.jpg"
-      width="150px"
-      height="150px"
-      contain
-      class="mx-auto img-circle"
+      class="mx-auto img-circle main-image"
       alt="My wife and I"
     >
       <template v-slot:placeholder>
@@ -55,9 +52,7 @@
         <v-img
           src="kona.jpg"
           lazy-src="Kona.jpg"
-          height="150px"
           width="150px"
-          contain
           class="mx-auto img-circle"
           alt="Kona"
         >
@@ -74,9 +69,7 @@
         <v-img
           src="Chai.jpg"
           lazy-src="Chai.jpg"
-          height="150px"
           width="150px"
-          contain
           class="mx-auto img-circle"
           alt="Chai"
         >
@@ -104,37 +97,42 @@ export default {
 </script>
 
 <style scoped>
+.main-image {
+  width: 300px;
+}
+
 .introduction {
-    max-width: 650px;
-    width: 70%;
-    margin: auto;
+  max-width: 650px;
+  width: 70%;
+  margin: auto;
 }
 
 .introduction p {
-    line-height: 1.4;
+  line-height: 1.4;
 }
 
 .puppy-pictures {
-    display: flex;
+  display: flex;
+  align-content: space-around;
 }
 
 .img-circle {
-    border-radius: 50%;
-}
-
-@media (min-width: 800px) {
-    .img-circle {
-        width: 200px !important;
-    }
+  border: 2px solid #2b95ff;
+  border-radius: 5px;
 }
 
 @media (max-width: 550px) {
-    .puppy-pictures {
-        display: block;
-    }
-    .img-circle {
-        display: block;
-        margin-bottom: 15px;
-    }
+  .main-image {
+    width: 200px;
+  }
+
+  .puppy-pictures {
+    display: block;
+  }
+
+  .img-circle {
+    display: block;
+    margin-bottom: 15px;
+  }
 }
 </style>

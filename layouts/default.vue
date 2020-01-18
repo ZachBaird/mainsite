@@ -86,13 +86,18 @@ export default {
           to: '/about'
         },
         {
+          icon: 'mdi-card-bulleted',
+          title: 'Skills',
+          to: '/skills'
+        },
+        {
           icon: 'mdi-ballot',
           title: 'Projects',
           to: '/projects'
         },
         {
           icon: 'mdi-lightbulb',
-          title: 'Inspire',
+          title: 'Inspiration',
           to: '/inspire'
         }
       ],
