@@ -11,6 +11,7 @@
           v-for="(item, i) in items"
           :key="i"
           :to="item.to"
+          :link="item.to"
           router
           exact
         >
@@ -23,6 +24,18 @@
             <v-list-item-title v-text="item.title" />
           </v-list-item-content>
         </v-list-item>
+        <a :href="resume.to" target="_blank" style="color: inherit; text-decoration: none;">
+          <v-list-item>
+            <v-list-item-action>
+              <v-icon class="primary--text">
+                {{ resume.icon }}
+              </v-icon>
+            </v-list-item-action>
+            <v-list-item-content>
+              <v-list-item-title v-text="resume.title" />
+            </v-list-item-content>
+          </v-list-item>
+        </a>
       </v-list>
     </v-navigation-drawer>
     <v-app-bar
@@ -101,13 +114,13 @@ export default {
           icon: 'mdi-lightbulb',
           title: 'Inspiration',
           to: '/inspire'
-        },
-        {
-          icon: 'mdi-smart-card',
-          title: 'Resume',
-          to: 'https://zachbaird.me/ZacharyBairdResume.pdf'
         }
       ],
+      resume: {
+        icon: 'mdi-smart-card',
+        title: 'Resume',
+        to: 'https://zachbaird.me/ZacharyBairdResume.pdf'
+      },
       title: 'Zach Baird'
     }
   }
