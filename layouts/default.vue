@@ -105,7 +105,7 @@ export default {
         {
           icon: 'mdi-smart-card',
           title: 'Resume',
-          to: '/ZacharyBairdResume.pdf'
+          to: 'https://zachbaird.me/ZacharyBairdResume.pdf'
         }
       ],
       title: 'Zach Baird'
