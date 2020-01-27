@@ -12,15 +12,25 @@
           <v-btn text small color="primary" to="/inspire" class="my-0">
             Click here for inspiration
           </v-btn>
+          <v-btn text small color="accent" to="/projects" class="my-2 d-sm-none">
+            Click here to see projects
+          </v-btn>
         </div>
       </v-flex>
       <v-flex>
-        <div class="text--secondary headline ml-8 pl-2 py-5 font-weight-light flex-column" style="border-left: 1px solid #ccc;">
+        <div class="d-none d-sm-block text--secondary headline ml-8 pl-2 py-4 font-weight-light flex-column" style="border-left: 1px solid #ccc;">
           <p>
             Hello, welcome to my site.
           </p>
           <p>
             Feel free to click around!
+          </p>
+          <p>
+            Want to see
+            <v-btn text small color="primary" to="/projects" style="padding: 5px;">
+              projects
+            </v-btn>
+            ?
           </p>
         </div>
       </v-flex>

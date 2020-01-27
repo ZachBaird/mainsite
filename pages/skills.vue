@@ -105,25 +105,25 @@
           DevOps
         </p>
         <div class="devops">
-          <div class="platform col-xs-12 col-sm-4 col-md-4">
+          <div class="platform col-xs-12 col-sm-6 col-md-6">
             <v-icon color="orange">
               mdi-linux
             </v-icon>
             <span>Linux</span>
           </div>
-          <div class="platform col-xs-12 col-sm-4 col-md-4">
+          <div class="platform col-xs-12 col-sm-6 col-md-6">
             <v-icon color="blue">
               mdi-windows
             </v-icon>
             <span>Windows</span>
           </div>
-          <div class="platform col-xs-12 col-sm-4 col-md-4">
+          <div class="platform col-xs-12 col-sm-6 col-md-6">
             <v-icon color="red">
               mdi-git
             </v-icon>
             <span>Git</span>
           </div>
-          <div class="platform col-xs-12 col-sm-4 col-md-4">
+          <div class="platform col-xs-12 col-sm-6 col-md-6">
             <v-icon color="blue">
               mdi-azure
             </v-icon>
@@ -164,8 +164,9 @@ export default {
 
 .devops {
   display: flex;
-  align-content: space-around;
+  align-items: space-between;
   flex-wrap: wrap;
+  width: 100%;
 }
 
 .language {

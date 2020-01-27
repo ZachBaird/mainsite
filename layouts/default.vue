@@ -33,7 +33,9 @@
       <v-app-bar-nav-icon
         @click.stop="drawer = !drawer"
       />
-      <v-toolbar-title v-text="title" />
+      <nuxt-link style="text-decoration: none; color: inherit;" to="/">
+        <v-toolbar-title v-text="title" />
+      </nuxt-link>
       <v-spacer />
       <v-switch
         v-model="$vuetify.theme.dark"
@@ -99,6 +101,11 @@ export default {
           icon: 'mdi-lightbulb',
           title: 'Inspiration',
           to: '/inspire'
+        },
+        {
+          icon: 'mdi-smart-card',
+          title: 'Resume',
+          to: '/ZacharyBairdResume.pdf'
         }
       ],
       title: 'Zach Baird'
