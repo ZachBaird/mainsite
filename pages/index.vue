@@ -9,12 +9,6 @@
           <p class="text--secondary display-1 font-weight-regular mb-0">
             Fullstack Web Developer
           </p>
-          <v-btn text small color="primary" to="/inspire" class="my-0">
-            Click here for inspiration
-          </v-btn>
-          <v-btn text small color="accent" to="/projects" class="my-2 d-sm-none">
-            Click here to see projects
-          </v-btn>
         </div>
       </v-flex>
       <v-flex>
@@ -23,13 +17,15 @@
             Hello, welcome to my site.
           </p>
           <p>
-            Feel free to click around!
-          </p>
-          <p>
             Want to see
             <v-btn text small color="primary" to="/projects" style="padding: 5px;">
               projects
             </v-btn>
+            ?
+          </p>
+          <p>
+            Want to see
+            <v-btn text small color="primary" to="/skills" style="padding: 5px;">skills</v-btn>
             ?
           </p>
         </div>

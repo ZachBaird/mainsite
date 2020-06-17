@@ -116,7 +116,7 @@ export default {
           tech: [
             {
               snackbar: 'Ruby',
-              img: 'mdi-ruby',
+              img: 'mdi-language-ruby',
               color: 'red'
             }
           ]
@@ -154,7 +154,7 @@ export default {
           tech: [
             {
               snackbar: 'Python',
-              img: 'mdi-language-python-text',
+              img: 'mdi-language-python',
               color: 'green'
             }
           ]
@@ -170,7 +170,7 @@ export default {
           tech: [
             {
               snackbar: 'Python',
-              img: 'mdi-language-python-text',
+              img: 'mdi-language-python',
               color: 'green'
             },
             {

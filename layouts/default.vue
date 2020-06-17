@@ -69,7 +69,7 @@
       <v-spacer />
       <a href="https://github.com/ZachBaird" target="_blank" class="mr-1">
         <v-icon color="purple">
-          mdi-github-circle
+          mdi-github
         </v-icon>
       </a>
       <a href="https://www.linkedin.com/in/zachary-baird-b7a9a9138?trk=people-guest_profile-result-card_result-card_full-click" target="_blank">
@@ -109,11 +109,6 @@ export default {
           icon: 'mdi-ballot',
           title: 'Projects',
           to: '/projects'
-        },
-        {
-          icon: 'mdi-lightbulb',
-          title: 'Inspiration',
-          to: '/inspire'
         }
       ],
       resume: {
