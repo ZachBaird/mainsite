@@ -88,7 +88,7 @@ export default {
           title: 'Main Site',
           status: 'Finished',
           description: 'A main site built with Nuxt.js and statically generated.',
-          url: 'https://github.com/ZachBaird/MainSiteRefresh',
+          url: 'https://github.com/ZachBaird/mainsite',
           liveSite: true,
           liveUrl: '/',
           liveText: 'You\'re on it!',
@@ -110,7 +110,7 @@ export default {
           title: 'CaesarCipher',
           status: 'Finished',
           description: 'A Ruby script that runs a CaesarCipher on a string of text.',
-          url: 'https://github.com/ZachBaird/CaesarCipher',
+          url: 'https://github.com/ZachBaird/caesarcipher',
           liveSite: false,
           liveUrl: '',
           tech: [
