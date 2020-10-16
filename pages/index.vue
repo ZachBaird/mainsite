@@ -25,7 +25,9 @@
           </p>
           <p>
             Want to see
-            <v-btn text small color="primary" to="/skills" style="padding: 5px;">skills</v-btn>
+            <v-btn text small color="primary" to="/skills" style="padding: 5px;">
+              skills
+            </v-btn>
             ?
           </p>
         </div>
