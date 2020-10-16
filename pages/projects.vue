@@ -26,7 +26,7 @@
           </template>
         </v-img>
         <h2 class="title-section font-weight-regular text-center my-3">
-          {{ project.title }} | Status: {{ project.status }}
+          {{ project.title }}
         </h2>
         <div class="description-section">
           <p class="mt-3">
@@ -86,7 +86,6 @@ export default {
         {
           image: 'mainsite.jpg',
           title: 'Main Site',
-          status: 'Finished',
           description: 'A main site built with Nuxt.js and statically generated.',
           url: 'https://github.com/ZachBaird/mainsite',
           liveSite: true,
@@ -107,9 +106,8 @@ export default {
         },
         {
           image: 'caesarcipher.jpg',
-          title: 'CaesarCipher',
-          status: 'Finished',
-          description: 'A Ruby script that runs a CaesarCipher on a string of text.',
+          title: 'Caesar Cipher',
+          description: 'A test-driven Ruby script that encrypts text in the terminal.',
           url: 'https://github.com/ZachBaird/caesarcipher',
           liveSite: false,
           liveUrl: '',
@@ -122,61 +120,32 @@ export default {
           ]
         },
         {
-          image: 'oreoweather.jpg',
-          title: 'OreoWeather',
-          status: 'On hold',
-          description: 'A .Net Core weather application for my grandfather.',
-          url: 'https://github.com/ZachBaird/OreoWeather',
-          liveSite: true,
-          liveUrl: 'https://darkskyui.azurewebsites.net',
-          liveText: 'See live site',
+          image: 'tictactoe.jpg',
+          title: 'Tic Tac Toe',
+          description: 'A test-driven tic tac toe game played in the terminal.',
+          url: 'https://github.com/ZachBaird/tictactoe',
+          liveSite: false,
+          liveUrl: '',
           tech: [
             {
-              snackbar: 'C# .Net Core',
-              img: 'mdi-dot-net',
-              color: 'purple'
-            },
-            {
-              snackbar: 'Bootstrap',
-              img: 'mdi-bootstrap',
-              color: 'purple'
+              snackbar: 'Ruby',
+              img: 'mdi-language-ruby',
+              color: 'red'
             }
           ]
         },
         {
-          image: '',
-          title: 'Python Automation',
-          status: 'Backlog',
-          description: 'Python scripts for automation.',
-          url: 'https://github.com/ZachBaird/Python_Automation',
+          image: 'hangman.jpg',
+          title: 'Hangman',
+          description: 'A game played in the terminal. Features saved games!',
+          url: 'https://github.com/ZachBaird/hangman',
           live: false,
           liveUrl: '',
           tech: [
             {
-              snackbar: 'Python',
-              img: 'mdi-language-python',
-              color: 'green'
-            }
-          ]
-        },
-        {
-          image: 'djangorealestate.jpg',
-          title: 'Realestate app',
-          status: 'Bugfix',
-          description: 'A real estate application built with the Django framework.',
-          url: 'https://github.com/ZachBaird/Real-Estate-App',
-          live: false,
-          liveUrl: '',
-          tech: [
-            {
-              snackbar: 'Python',
-              img: 'mdi-language-python',
-              color: 'green'
-            },
-            {
-              snackbar: 'Bootstrap',
-              img: 'mdi-bootstrap',
-              color: 'purple'
+              snackbar: 'Ruby',
+              img: 'mdi-language-ruby',
+              color: 'red'
             }
           ]
         }

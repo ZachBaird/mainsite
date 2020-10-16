@@ -1,22 +1,18 @@
-# nuxtintro
+# My Main Site
 
-> First Nuxtjs app
+This project retains much of the standard, scaffolded structure that `npx create-nuxt-app` provides.
 
-## Build Setup
+## Requirements
 
-``` bash
-# install dependencies
-$ npm run install
+* Node.js
 
-# serve with hot reload at localhost:3000
-$ npm run dev
+## Getting Started
 
-# build for production and launch server
-$ npm run build
-$ npm run start
+1. Clone the repo
+2. `cd` into `mainsite`
+3. Run `npm i`
+4. Run `npm run dev`
 
-# generate static project
-$ npm run generate
-```
+## Notes
 
-For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
+* Vuetify.js was used for Material Design pre-styled Vue components.
